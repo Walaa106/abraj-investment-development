@@ -1,18 +1,50 @@
 import * as React from "react"
+import '@fontsource/sora';
+import BasicSlider from "../components/basicSlider"
+import Features from "../components/features"
+import Layout from '../components/layout'
+import { Mail, Twitter, Instagram, Facebook, Linkedin, Briefcase, ArrowRight } from 'react-feather'
 
-export default function IndexPage() {
+export default function Example() {
   return (
-    <div variant="container" textAlign="center" py="20">
-      <h1 variant="heading.h1">
-        Welcome to <span color="primary">Reflexjs</span>
-      </h1>
-      <p fontSize="xl" my="4">
-        Get started by editing{" "}
-        <code variant="text.code">src/pages/index.jsx</code>
-      </p>
-      <a href="https://reflexjs.org/docs" variant="button.primary">
-        Read the docs
-      </a>
-    </div>
+    <Layout>
+      <BasicSlider />
+      <Features
+        heading="مشاريعنا"
+        features={[
+          {
+            heading: "مبنى أبراج",
+            text: "يقع أبراج هاوس في موقع إستراتيجي مميز مطل على مدينة رام الله، و يجاور عدد من المقرات الرسمية لمجموعة من الهيئات العالمية و المحلية مثل مقر البوليس الاوروبي و مقر الأمم المتحدة و قصر الثقافة، بالإضافة لمباني حكومية. و قريبا سيتم إنشاء قاعات المعارض التابعة لبلدية رام الله. ",
+            image: '/images/abraj-slider.jpeg',
+            link: (
+              <a display="inline-flex" alignItems="center" href="/abraj-building">
+                للمزيد <ArrowRight size="4" ml="2" />
+              </a>
+            ),
+          },
+          {
+            heading: "مشروع جفنات",
+            text: "يجسّـد مشـروع ضاحيـة جفنـات )جفنـات العنـب( معانـي المعيشـة النابضة بالحيـاة ضمن موقع اسـتراتيجي ،صمّمـت لتلبـي جميـع احتياجاتـك ولتقـدّ م لـك راحـة ال مثيـل لها. يوفـر االتصـال المباشـر بالشـوارع الحيويـة للمقيميـن تأقلمـا سـريعا مـع أسـلوب الحيـاة الحضـري المعاصـرليكـون كل مـا يلـزم المشـروع مـن مرافـق فـي محـط أنظاركـم ! .",
+            image: '/images/jefnat.png',
+            link: (
+              <a display="inline-flex" alignItems="center" href="/jifnat-project">
+                للمزيد <ArrowRight size="4" ml="2" />
+              </a>
+            ),
+          },
+          {
+            heading: "مشاريع مستقبلية",
+            text:
+              "Vestibulum ante ipsum primis in faucibus orci luctus et primis in faucibus ultrices.",
+            image: '/images/future-project.png',
+            link: (
+              <a display="inline-flex" alignItems="center" href="future-projects">
+                للمزيد <ArrowRight size="4" ml="2" />
+              </a>
+            ),
+          },
+        ]}
+      />
+    </Layout>
   )
 }

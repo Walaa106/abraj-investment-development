@@ -11,11 +11,16 @@
   },
   "dependencies": {
     "@babel/preset-react": "^7.13.13",
+    "@fontsource/sora": "^4.5.0",
+    "@openfonts/tajawal_arabic": "^1.44.1",
     "babel-preset-gatsby": "^1.2.0",
     "gatsby": "^3.2.1",
     "gatsby-plugin-reflexjs": "^0.2.0",
+    "hero-slider": "^2.0.3",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "reflexjs": "^2.0.0"
+    "react-feather": "^2.0.9",
+    "reflexjs": "^2.0.0",
+    "styled-components": "^5.3.3"
   }
 }

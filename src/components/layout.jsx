@@ -97,7 +97,7 @@ export default function Layout({ children, props }) {
             iconLinks={socialMediaIcons}
             copyright={`Copyright © ${new Date().getFullYear()} Abraj Investment & Development. All rights reserved.`}
         >
-            {/* <a
+            <a
                 href='tel:+022987424'
                 variant='text'
                 display='inline-flex'
@@ -109,7 +109,7 @@ export default function Layout({ children, props }) {
             >
                 <Phone size='26' />
                 <span ml='2'>02-2987424</span>
-            </a> */}
+            </a>
         </Footer>
         {/* End Footer */}
     </>

@@ -53,16 +53,17 @@ export default function Block({
           </div>
           {images &&
             <div 
-            d="flex"
-            flexDirection="column"
-            alignItems="center|flex-start"
-            textAlign="center|right">
+              d="flex"
+              flexDirection="column"
+              alignItems="center|flex-start"
+              textAlign="center|right">
               <h4>{imagesTitle}</h4>
               {  images.map(image => {
                 return <img
                   colStart={`null|null|${imagePosition === "left" ? 1 : 2}`}
-                  w="half"
+                  w="45%"
                   rounded="lg"
+                  mr='4'
                   overflow="hidden"
                   {...image}
                 />

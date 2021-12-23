@@ -10,7 +10,7 @@ export default function Block({
   ...props
 }) {
   return (
-    <section py={[8, 10, 12]} bg='#f8f8f8' boxShadow="0px 0px 4px rgb(0 0 0 / 20%)" {...props}>
+    <section py={[8, 10, 12]} boxShadow="0px 0px 4px rgb(0 0 0 / 20%)" {...props}>
       <div variant='container'>
         <div
           display='flex'

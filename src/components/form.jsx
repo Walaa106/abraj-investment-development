@@ -11,7 +11,7 @@ export default function Block({
   return (
     <section py="6|8|12|20" {...props}>
       <div variant="container">
-        <div alignItems="center" mx='auto' w='half'>
+        <div display="grid" col="1|2" gap="8|12|16" alignItems="center">
           <form
               display="grid"
               col="1|repeat(2, auto)"
@@ -67,28 +67,38 @@ export default function Block({
                   rows="5"
                 />
               </div>
-              <button type="submit" variant="button.primary" colStart="span 2">
+              <button type="submit" variant="button.primary" colStart="span 2" fontFamily='Tajawal'>
                 ارسل الرسالة
               </button>
             </form>
           
-            <div>
-              {subheading && (
-                <p color="primary" textTransform="uppercase" m="0">
-                  {subheading}
+            <div bg='secondary' borderRadius='lg' p='6' color='#fff'>
+              <div borderBottom="1px solid rgba(255, 255, 255, 0.2)" pb='4'>
+                <h4>
+                  لزيارتنا :
+                </h4>
+                <p>
+                  شارع طوكيو 15
+                  <br class='d-block'/>
+                  رام الله، فلسطين
                 </p>
-              )}
-              {heading && (
-                <h1 variant="heading.h1" fontWeight="bolder" lineHeight="tight">
-                  {heading}
-                </h1>
-              )}
-              {text && (
-                <p variant="text.lead" mt="2">
-                  {text}
+              </div>
+              <div borderBottom="1px solid rgba(255, 255, 255, 0.2)" py='4'>
+                <h4>
+                  تواصل معنا عبر البريد الالكتروني :
+                </h4>
+                <p> info@abraj.ps </p>
+              </div>
+
+              <div borderBottom="1px solid rgba(255, 255, 255, 0.2)" py='4'>
+                <h4>
+                  اتصل بنا عالارقام التالية:
+                </h4>
+                <p>
+                  tel: 02-2987424
                 </p>
-              )}
-              {buttons}
+                <p>fax: 02-2987434</p>
+              </div>
             </div>
           </div>
       </div>

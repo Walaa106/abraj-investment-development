@@ -239,7 +239,6 @@ const theme = {
         borderColor: "border",
         m: 0,
         p: 0,
-
         "::selection": {
           bg: "selection",
         },

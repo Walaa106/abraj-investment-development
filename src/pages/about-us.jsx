@@ -7,6 +7,11 @@ export default function Example() {
         <Member
             pb="2"
             subheading="نبذة عن الشركة:"
+            subheadingProps={{
+                borderBottom: '4px solid',
+                borderColor: "secondary",
+                w: '150'
+            }}
             text="
             نشئت
             ُ
@@ -29,6 +34,11 @@ export default function Example() {
         <Member 
             py="4"
             subheading="أهداف الشركة:"
+            subheadingProps={{
+                borderBottom: '4px solid',
+                borderColor: "secondary",
+                w: '150'
+            }}
             text="
             تهدف شركة أبراج إلدخال نمط جديد من املشاريع العقارية الحديثة التي تنعكس نتائجها بصورة إيجابية على املستوى
             املعيش ي للمجتمع واألفراد والنهوض بالواقع العقاري وتطويره عن طريق:
@@ -47,6 +57,11 @@ export default function Example() {
         <Member 
             py="4"
             subheading="رسالة الشركة:"
+            subheadingProps={{
+                borderBottom: '4px solid',
+                borderColor: "secondary",
+                w: '150'
+            }}
             text="
             تهدف شركة أبراج إلدخال نمط جديد من املشاريع العق
             تكمن مهمة شركة أبراج في املساهمة بشكل فاعل بوضع أسس قوية ومتينة لسوق العقارات واالستثمارات الفلسطيني،
@@ -62,6 +77,11 @@ export default function Example() {
         <Member 
             py="4"
             subheading="رؤية الشركة:"
+            subheadingProps={{
+                borderBottom: '4px solid',
+                borderColor: "secondary",
+                w: '150'
+            }}
             text="تسعى شركة أبراج إل دخال أفكار جديدة وإتجاهات هندسية حديثة، لألذواق املختلفة
 
             مميزا

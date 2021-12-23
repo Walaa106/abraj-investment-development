@@ -9,6 +9,7 @@ export default function Block({
   buttons,
   images,
   imagesTitle,
+  subheadingProps,
   children,
   ...props
 }) {
@@ -37,7 +38,7 @@ export default function Block({
             alignItems="center|flex-start"
             textAlign="center|right"
           >
-            {subheading && <p variant="subheading" fontSize="22">{subheading}</p>}
+            {subheading && <p variant="subheading" fontSize="22" {...subheadingProps}>{subheading}</p>}
             {heading && (
               <h1 variant="heading.h1" fontWeight="bolder" lineHeight="tight">
                 {heading}

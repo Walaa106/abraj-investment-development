@@ -5,7 +5,7 @@ export default function Block({ branding, links, ...props }) {
   const [showMenu, setShowMenu] = React.useState(false)
 
   return (
-    <header py="0" {...props}>
+    <header py="0" boxShadow="0px 0px 4px rgb(0 0 0 / 20%)" {...props}>
       <div variant="container">
         <div display="flex" alignItems="center">
           {branding && (

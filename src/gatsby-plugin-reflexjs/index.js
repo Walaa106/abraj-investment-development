@@ -256,8 +256,10 @@ const theme = {
       a: {
         color: "link",
         textDecoration: "inherit",
+        fontFamily: "Tajawal",
         "&:hover": {
           textDecoration: "underline",
+          color: "link",
         },
       },
       button: {
@@ -286,7 +288,7 @@ const theme = {
   },
   text: {
     color: "text",
-    fontFamily: "Sora",
+    fontFamily: "Tajawal",
     lead: {
       fontSize: "2xl",
       lineHeight: "normal",
@@ -420,6 +422,7 @@ const theme = {
     color: "textLighter",
     textTransform: "uppercase",
     m: 0,
+    fontFamily: "Tajawal"
   },
   heading: {
     color: "heading",
@@ -460,7 +463,7 @@ const theme = {
     px: "6|6|6|4",
     mx: "auto",
     maxWidth: 1280,
-
+    fontFamily: "Tajawal",
     sm: {
       maxWidth: 670,
     },
@@ -479,6 +482,7 @@ const theme = {
   },
 
   button: {
+    fontFamily: "Tajawal",
     display: "inline-flex",
     alignItems: "center",
     justifyContent: "center",
@@ -583,7 +587,6 @@ const theme = {
       bg: "transparent",
       color: "link",
       borderColor: "transparent",
-
       "&:hover, &:focus": {
         bg: "transparent",
         borderColor: "transparent",
@@ -615,7 +618,7 @@ const theme = {
   input: {
     bg: "muted",
     color: "text",
-    fontFamily: "Sora",
+    fontFamily: "Tajawal",
     fontSize: "md",
     lineHeight: "none",
     borderWidth: 1,

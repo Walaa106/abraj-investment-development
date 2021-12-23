@@ -19,18 +19,18 @@ const links = [
       href: "/future-projects",
       subMenu: [{
         name: "مبنى أبراج",
-        link: "abrja-building",
+        link: "/abraj-building",
       }, {
         name: "مشروع جفنات",
-        link: "jifnat-project",
+        link: "/jifnat-project",
       }, {
         name: "مشاريع مستقبلية",
-        link: "future-projects",
+        link: "/future-projects",
       }]
     },
     {
       title: "اتصل بنا",
-      href: "#",
+      href: "/contact-us",
     },
 ];
 
@@ -63,7 +63,7 @@ const footerLinks = [{
     },
     {
         title: "tel: 02-2987424",
-        href: "#",
+        href: "tel:+022987424",
     },
     {
         title: "fax: 02-2987434",
@@ -96,21 +96,7 @@ export default function Layout({ children, props }) {
             links={footerLinks}
             iconLinks={socialMediaIcons}
             copyright={`Copyright © ${new Date().getFullYear()} Abraj Investment & Development. All rights reserved.`}
-        >
-            <a
-                href='tel:+022987424'
-                variant='text'
-                display='inline-flex'
-                alignItems='center'
-                ml='5'
-                _hover={{
-                    color: 'primary',
-                }}
-            >
-                <Phone size='26' />
-                <span ml='2'>02-2987424</span>
-            </a>
-        </Footer>
+        />
         {/* End Footer */}
     </>
   )

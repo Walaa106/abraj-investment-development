@@ -43,6 +43,7 @@ export function Feature({
   heading,
   text,
   image,
+  imgFullWidth,
   link,
   ...props
 }) {
@@ -56,7 +57,7 @@ export function Feature({
       {...props}
     >
       <div w='full'>
-        <img src={image} h='260px'/>
+        <img src={image} w='full' h='260px'/>
       </div>
       <div flex="1" p="8">
         <h4 variant="heading.h4">{heading}</h4>

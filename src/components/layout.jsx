@@ -11,7 +11,7 @@ const links = [
       href: "/",
     },
     {
-      title: "عنا",
+      title: "نبذة عن الشركة",
       href: "/about-us",
     },
     {
@@ -42,7 +42,7 @@ const footerLinks = [{
     href: "/home",
     items: [
     {
-        title: "عنا",
+        title: "نبذة عن الشركة",
         href: "/about-us",
     },
     {

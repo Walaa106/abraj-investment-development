@@ -50,7 +50,7 @@ export default function Example() {
 
       <Member
         subheading="رئيس مجلس الإدارة"
-        heading="السيد طالل ناصر الدين"
+        heading="السيد طلال ناصر الدين"
         text="تسعى شركة أبراج إل دخال أفكار جديدة وإتجاهات هندسية حديثة، لألذواق املختلفة
 
         مميزا
@@ -65,7 +65,7 @@ export default function Example() {
         }}
         buttons={
           <div display="inline-grid" col="2" gap="2" mt="4">
-            <a variant="button.primary" href="#" fontFamily="Tajawal">
+            <a variant="button.primary" href="/about-us" fontFamily="Tajawal">
               قراءة المزيد
             </a>
           </div>
@@ -85,7 +85,7 @@ export default function Example() {
         }}
         buttons={
           <div display="inline-grid" col="2" gap="2" mt="4">
-            <a variant="button.primary" href="#" fontFamily="Tajawal">
+            <a variant="button.primary" href="about-us" fontFamily="Tajawal">
               قراءة المزيد
             </a>
           </div>

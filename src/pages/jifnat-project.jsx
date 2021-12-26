@@ -1,12 +1,23 @@
 import * as React from "react"
 import Layout from '../components/layout'
-import Member from "../components/member"
+import { Printer } from 'react-feather';
 
 export default function Example() {
     return <Layout>
         {/* <iframe src='/images/jifnat-proposal.pdf' title="dummy" style={{width:'100%',height:'600px'}}></iframe> */}
         <section py="6|12|20">
             <div variant="container">
+            
+            <div position='fixed' top='35%' left='0'>
+                <button ml="auto" variant="button.primary" colStart="span 2" fontFamily='Tajawal'
+                onClick={(event) => {
+                    event.preventDefault();
+                    window.open('/images/jifnat-proposal.pdf', "PRINT");
+                }}>
+                    <span ml='4' mt='1'>للطباعة</span>
+                    <Printer name="printer-alt" size="20" />
+                </button>
+            </div>
             <div
             display="grid"
             gridAutoFlow="dense"
@@ -129,6 +140,39 @@ export default function Example() {
                     src='/images/anan.png'
                 />
             </div>
+            <img colStart={`null|null|2`}
+                    w="full"
+                    rounded="lg"
+                    overflow="hidden"
+                    src='/images/before-table.png'
+            />
+            <img colStart={`null|null|2`}
+                    w="full"
+                    rounded="lg"
+                    overflow="hidden"
+                    src='/images/jifnat-table.png'
+            />
+
+            <img colStart={`null|null|2`}
+                    w="full"
+                    rounded="lg"
+                    overflow="hidden"
+                    src='/images/sewar.png'
+            />
+
+            <img colStart={`null|null|2`}
+                    w="full"
+                    rounded="lg"
+                    overflow="hidden"
+                    src='/images/sewar-2.png'
+            />
+
+            <img colStart={`null|null|2`}
+                    w="full"
+                    rounded="lg"
+                    overflow="hidden"
+                    src='/images/sewar-3.png'
+            />
         </div>
         </section>
     </Layout>

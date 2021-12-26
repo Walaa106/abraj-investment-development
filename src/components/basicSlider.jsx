@@ -3,8 +3,12 @@ import React from "react";
 import HeroSlider, { Slide, Nav, OverlayContainer } from "hero-slider";
 
 // Images
-const bogliasco = "/images/abraj-slider.jpeg";
-const countyClare = "/images/abraj-2.jpeg";
+const bogliasco = "/images/slider/1.jpg";
+const bogliasco2 = "/images/slider/2.jpg";
+const bogliasco3 = "/images/slider/3.jpg";
+const bogliasco4 = "/images/slider/4.jpg";
+const bogliasco5 = "/images/slider/5.jpg";
+const bogliasco6 = "/images/slider/6.jpg";
 
 const app = () => {
   return (
@@ -26,7 +30,7 @@ const app = () => {
         shouldAutoplay: true,
         shouldDisplayButtons: true,
         autoplayDuration: 5000,
-        height: "80vh"
+        height: "90vh"
       }}
     >
       <OverlayContainer>
@@ -72,11 +76,38 @@ backgroundColor: "rgba(0, 0, 0, 0.1)"}}></div>
 
       <Slide
         background={{
-          backgroundImage: countyClare,
+          backgroundImage: bogliasco2,
           backgroundAttachment: "fixed"
         }}
       />
 
+      <Slide
+        background={{
+          backgroundImage: bogliasco3,
+          backgroundAttachment: "fixed"
+        }}
+      />
+
+      <Slide
+        background={{
+          backgroundImage: bogliasco4,
+          backgroundAttachment: "fixed"
+        }}
+      />
+
+
+      <Slide
+        background={{
+          backgroundImage: bogliasco5,
+          backgroundAttachment: "fixed"
+        }}
+      />
+      <Slide
+        background={{
+          backgroundImage: bogliasco6,
+          backgroundAttachment: "fixed"
+        }}
+      />
       <Nav />
     </HeroSlider>
   );

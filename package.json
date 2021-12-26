@@ -14,6 +14,7 @@
     "@fontsource/sora": "^4.5.0",
     "@openfonts/tajawal_arabic": "^1.44.1",
     "babel-preset-gatsby": "^1.2.0",
+    "emailjs-com": "^3.2.0",
     "gatsby": "^3.2.1",
     "gatsby-plugin-reflexjs": "^0.2.0",
     "hero-slider": "^2.0.3",

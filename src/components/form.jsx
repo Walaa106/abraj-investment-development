@@ -1,5 +1,6 @@
 import * as React from "react"
 import { VisuallyHidden } from "reflexjs"
+import emailjs from 'emailjs-com';
 
 export default function Block({
   subheading,
@@ -8,6 +9,28 @@ export default function Block({
   buttons,
   ...props
 }) {
+  const sendMessage = (event) => {
+    event.preventDefault();
+    const templateParams = {
+      from_name: 'Walaa' + " (wala.abulebdeh@gmail.com)",
+      to_name: 'Walaa',
+      feedback: this.state.feedback
+    };
+    emailjs
+      .send("gmail", "portfoliositecontact", templateParams, "zmdhw4c")
+      .then(
+        function(response) {
+          // toast.success("Your message has successfully sent!", {
+          //   position: toast.POSITION.BOTTOM_CENTER
+          // });
+          console.log("SUCCESS!", response.status, response.text);
+        },
+        function(err) {
+          console.log(err, 'err')
+          // toast.error("Your message was not able to be sent");
+        }
+      );
+  }
   return (
     <section py="6|8|12|20" {...props}>
       <div variant="container">

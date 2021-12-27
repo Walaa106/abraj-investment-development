@@ -1,35 +1,34 @@
-import * as React from "react"
+import React from "react"
 import { VisuallyHidden } from "reflexjs"
+import { init } from 'emailjs-com';
 import emailjs from 'emailjs-com';
 
-export default function Block({
+init("user_dGTT3od2alKJeAVtevFVs");
+
+const Form = ({
   subheading,
   heading,
   text,
   buttons,
   ...props
-}) {
+}) => {
+  const [formData, setFormData] = React.useState({
+    from_name: '',
+    from_email: '',
+    message: '',
+    phone: '',
+  });
   const sendMessage = (event) => {
+    console.log(formData, 'params')
     event.preventDefault();
-    const templateParams = {
-      from_name: 'Walaa' + " (wala.abulebdeh@gmail.com)",
-      to_name: 'Walaa',
-      feedback: this.state.feedback
-    };
-    emailjs
-      .send("gmail", "portfoliositecontact", templateParams, "zmdhw4c")
-      .then(
-        function(response) {
-          // toast.success("Your message has successfully sent!", {
-          //   position: toast.POSITION.BOTTOM_CENTER
-          // });
-          console.log("SUCCESS!", response.status, response.text);
-        },
-        function(err) {
-          console.log(err, 'err')
-          // toast.error("Your message was not able to be sent");
-        }
-      );
+    emailjs.send("service_jqslozn","template_gi5l6gd",{
+      ...formData,
+      reply_to: 'wala.abulebdeh@gmail.com,'//"ayman@abraj.ps",
+    }).then(function(response) {
+       console.log('SUCCESS!', response.status, response.text);
+    }, function(error) {
+       console.log('FAILED!!...', error);
+    });
   }
   return (
     <section py="6|8|12|20" {...props}>
@@ -41,17 +40,20 @@ export default function Block({
               gap="4"
               mt="4"
               w="full|auto"
+              onSubmit={sendMessage}
             >
               <div>
                 <VisuallyHidden>
                   <label htmlFor="name">الاسم</label>
                 </VisuallyHidden>
                 <input
+                  value={formData.from_name}
                   variant="input"
                   type="text"
                   id="name"
                   name="name"
                   placeholder="الاسم"
+                  onChange={(e) => setFormData({...formData, from_name: e.target.value})}
                 />
               </div>
               <div>
@@ -59,11 +61,13 @@ export default function Block({
                   <label htmlFor="email">الايميل</label>
                 </VisuallyHidden>
                 <input
+                  value={formData.from_email}
                   variant="input"
                   type="email"
                   id="email"
                   name="email"
                   placeholder="الايميل"
+                  onChange={(e) => setFormData({...formData, from_email: e.target.value})}
                 />
               </div>
               <div>
@@ -83,6 +87,8 @@ export default function Block({
                   <label htmlFor="message">رسالة</label>
                 </VisuallyHidden>
                 <textarea
+                  onChange={(e) => setFormData({...formData, message: e.target.value})}
+                  value={formData.message}
                   variant="textarea"
                   placeholder="رسالة"
                   id="message"
@@ -90,7 +96,7 @@ export default function Block({
                   rows="5"
                 />
               </div>
-              <button type="submit" variant="button.primary" colStart="span 2" fontFamily='Tajawal'>
+              <button type="submit" variant="button.primary" colStart="span 2" fontFamily='Tajawal' >
                 ارسل الرسالة
               </button>
             </form>
@@ -128,3 +134,5 @@ export default function Block({
     </section>
   )
 }
+
+export default Form;

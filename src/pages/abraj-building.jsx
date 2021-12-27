@@ -86,7 +86,7 @@ export default function Example() {
                     </ul>
                     
                 </div>
-                <img src='/images/abraj-internal.jpg' colStart={`null|null|2`} w="full" rounded="lg" overflow="hidden"/>
+                <img src='/images/abraj-internal.JPG' colStart={`null|null|2`} w="full" rounded="lg" overflow="hidden"/>
             </div>
         </div>
         </section>

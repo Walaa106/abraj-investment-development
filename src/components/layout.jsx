@@ -60,7 +60,7 @@ const footerLinks = [{
     items: [
     {
         title: "info@abraj.ps",
-        href: "#",
+        href: "mailto:ayman@abraj.ps",
     },
     {
         title: "tel: 02-2987424",

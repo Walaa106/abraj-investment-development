@@ -3,6 +3,8 @@ import { VisuallyHidden } from "reflexjs"
 import { init } from 'emailjs-com';
 import emailjs from 'emailjs-com';
 
+import {notify} from 'react-notify-toast';
+
 init("user_dGTT3od2alKJeAVtevFVs");
 
 const Form = ({
@@ -21,14 +23,27 @@ const Form = ({
   const sendMessage = (event) => {
     console.log(formData, 'params')
     event.preventDefault();
-    emailjs.send("service_jqslozn","template_gi5l6gd",{
+    emailjs.send("service_2wqw783","template_gi5l6gd",{
       ...formData,
-      reply_to: 'wala.abulebdeh@gmail.com,'//"ayman@abraj.ps",
+      reply_to: "ayman@abraj.ps",
     }).then(function(response) {
        console.log('SUCCESS!', response.status, response.text);
+       handleClick({
+         success: true
+      })
     }, function(error) {
        console.log('FAILED!!...', error);
+       handleClick({
+        error: true
+     })
     });
+  }
+  const handleClick = ({success, error}) => {
+    if (success) {
+      notify.show('تم ارسال الرسالة بنجاح، وشكرا!', 'success');
+    } else {
+      notify.show('حدث خطأ ما في ارسال الرسالة!', 'error');
+    }
   }
   return (
     <section py="6|8|12|20" {...props}>

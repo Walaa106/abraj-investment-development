@@ -133,9 +133,8 @@ var getRules = function getRules(value, points) {
 
 var fixedElements = /* #__PURE__ */new WeakMap();
 var compat = function compat(element) {
-  if (element.type !== 'rule' || !element.parent || // positive .length indicates that this rule contains pseudo
-  // negative .length indicates that this rule has been already prefixed
-  element.length < 1) {
+  if (element.type !== 'rule' || !element.parent || // .length indicates if this rule contains pseudo or not
+  !element.length) {
     return;
   }
 
@@ -951,7 +950,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var pkg = {
 	name: "@emotion/react",
-	version: "11.7.1",
+	version: "11.7.0",
 	main: "dist/emotion-react.cjs.js",
 	module: "dist/emotion-react.esm.js",
 	browser: {
@@ -978,7 +977,7 @@ var pkg = {
 	},
 	dependencies: {
 		"@babel/runtime": "^7.13.10",
-		"@emotion/cache": "^11.7.1",
+		"@emotion/cache": "^11.6.0",
 		"@emotion/serialize": "^1.0.2",
 		"@emotion/sheet": "^1.1.0",
 		"@emotion/utils": "^1.0.0",
@@ -999,8 +998,8 @@ var pkg = {
 	},
 	devDependencies: {
 		"@babel/core": "^7.13.10",
-		"@emotion/css": "11.7.1",
-		"@emotion/css-prettifier": "1.0.1",
+		"@emotion/css": "11.5.0",
+		"@emotion/css-prettifier": "1.0.0",
 		"@emotion/server": "11.4.0",
 		"@emotion/styled": "11.6.0",
 		"@types/react": "^16.9.11",
@@ -15241,7 +15240,7 @@ function combine (array, callback) {
 /***/ ((module) => {
 
 "use strict";
-module.exports = JSON.parse('{"name":"@emotion/react","version":"11.7.1","main":"dist/emotion-react.cjs.js","module":"dist/emotion-react.esm.js","browser":{"./dist/emotion-react.cjs.js":"./dist/emotion-react.browser.cjs.js","./dist/emotion-react.esm.js":"./dist/emotion-react.browser.esm.js"},"types":"types/index.d.ts","files":["src","dist","jsx-runtime","jsx-dev-runtime","_isolated-hnrs","types/*.d.ts","macro.js","macro.d.ts","macro.js.flow"],"sideEffects":false,"author":"mitchellhamilton <mitchell@mitchellhamilton.me>","license":"MIT","scripts":{"test:typescript":"dtslint types"},"dependencies":{"@babel/runtime":"^7.13.10","@emotion/cache":"^11.7.1","@emotion/serialize":"^1.0.2","@emotion/sheet":"^1.1.0","@emotion/utils":"^1.0.0","@emotion/weak-memoize":"^0.2.5","hoist-non-react-statics":"^3.3.1"},"peerDependencies":{"@babel/core":"^7.0.0","react":">=16.8.0"},"peerDependenciesMeta":{"@babel/core":{"optional":true},"@types/react":{"optional":true}},"devDependencies":{"@babel/core":"^7.13.10","@emotion/css":"11.7.1","@emotion/css-prettifier":"1.0.1","@emotion/server":"11.4.0","@emotion/styled":"11.6.0","@types/react":"^16.9.11","dtslint":"^0.3.0","html-tag-names":"^1.1.2","react":"16.14.0","svg-tag-names":"^1.1.1"},"repository":"https://github.com/emotion-js/emotion/tree/main/packages/react","publishConfig":{"access":"public"},"umd:main":"dist/emotion-react.umd.min.js","preconstruct":{"entrypoints":["./index.js","./jsx-runtime.js","./jsx-dev-runtime.js","./_isolated-hnrs.js"],"umdName":"emotionReact"}}');
+module.exports = JSON.parse('{"name":"@emotion/react","version":"11.7.0","main":"dist/emotion-react.cjs.js","module":"dist/emotion-react.esm.js","browser":{"./dist/emotion-react.cjs.js":"./dist/emotion-react.browser.cjs.js","./dist/emotion-react.esm.js":"./dist/emotion-react.browser.esm.js"},"types":"types/index.d.ts","files":["src","dist","jsx-runtime","jsx-dev-runtime","_isolated-hnrs","types/*.d.ts","macro.js","macro.d.ts","macro.js.flow"],"sideEffects":false,"author":"mitchellhamilton <mitchell@mitchellhamilton.me>","license":"MIT","scripts":{"test:typescript":"dtslint types"},"dependencies":{"@babel/runtime":"^7.13.10","@emotion/cache":"^11.6.0","@emotion/serialize":"^1.0.2","@emotion/sheet":"^1.1.0","@emotion/utils":"^1.0.0","@emotion/weak-memoize":"^0.2.5","hoist-non-react-statics":"^3.3.1"},"peerDependencies":{"@babel/core":"^7.0.0","react":">=16.8.0"},"peerDependenciesMeta":{"@babel/core":{"optional":true},"@types/react":{"optional":true}},"devDependencies":{"@babel/core":"^7.13.10","@emotion/css":"11.5.0","@emotion/css-prettifier":"1.0.0","@emotion/server":"11.4.0","@emotion/styled":"11.6.0","@types/react":"^16.9.11","dtslint":"^0.3.0","html-tag-names":"^1.1.2","react":"16.14.0","svg-tag-names":"^1.1.1"},"repository":"https://github.com/emotion-js/emotion/tree/main/packages/react","publishConfig":{"access":"public"},"umd:main":"dist/emotion-react.umd.min.js","preconstruct":{"entrypoints":["./index.js","./jsx-runtime.js","./jsx-dev-runtime.js","./_isolated-hnrs.js"],"umdName":"emotionReact"}}');
 
 /***/ }),
 

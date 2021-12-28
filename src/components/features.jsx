@@ -57,6 +57,7 @@ export function Feature({
       {...props}
     >
       <div w='full'>
+        
         <img src={image} w='full' h='260px'/>
       </div>
       <div flex="1" p="8">

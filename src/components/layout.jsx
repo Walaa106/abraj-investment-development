@@ -1,7 +1,8 @@
 import React from 'react'
-import { Phone, Twitter, Instagram, Facebook, Linkedin, Briefcase, LifeBuoy } from 'react-feather'
 import Header from './header'
 import Footer from './footer'
+import Notifications from 'react-notify-toast';
+
 import '@openfonts/tajawal_arabic';
 import "@openfonts/tajawal_arabic/index.css";
 
@@ -74,6 +75,11 @@ const footerLinks = [{
 export default function Layout({ children, props }) {
   return (
     <>
+        <Notifications />
+        {/* <div position='fixed' left='0'>
+          <img src='/images/messenger.png' w='70' />
+          <img src='/images/whatsapp.png' w='70' />
+        </div> */}
         {/* Start Header */}
         <Header
             minH='500|0'

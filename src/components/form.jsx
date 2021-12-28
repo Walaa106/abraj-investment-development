@@ -23,7 +23,7 @@ const Form = ({
   const sendMessage = (event) => {
     console.log(formData, 'params')
     event.preventDefault();
-    emailjs.send("service_2wqw783","template_gi5l6gd",{
+    emailjs.send("service_5krbqmf","template_gi5l6gd",{
       ...formData,
       reply_to: "ayman@abraj.ps",
     }).then(function(response) {

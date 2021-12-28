@@ -1,12 +1,13 @@
 import * as React from "react"
 import { Icon } from "reflexjs"
+import { Menu } from 'react-feather'
 
 export default function Block({ branding, links, ...props }) {
   const [showMenu, setShowMenu] = React.useState(false)
 
   return (
-    <header py="0" boxShadow="0px 0px 4px rgb(0 0 0 / 20%)" {...props}>
-      <div variant="container">
+    <header py="0" boxShadow="0px 0px 4px rgb(0 0 0 / 20%)" position='absolute|relative' {...props}>
+      <div variant="container" position='fixed|relative' zIndex='1001|auto' w='full|auto' bg='white|transparent'>
         <div display="flex" alignItems="center">
           {branding && (
             <a
@@ -21,6 +22,7 @@ export default function Block({ branding, links, ...props }) {
               <img src='/images/logo.png' w='100' alt='Abraj Investment & Development'/>
             </a>
           )}
+          {/* DESKTOP */}
           <NavLinks links={links} display="none|grid" />
           <button
             display="flex|none"
@@ -29,17 +31,17 @@ export default function Block({ branding, links, ...props }) {
             mr="auto"
             onClick={() => setShowMenu(!showMenu)}
           >
-            <Icon name="menu-alt" size="10" />
+            <Menu />
           </button>
         </div>
       </div>
+      {/* Mobile */}
       <div
-        position="absolute"
+        position="fixed"
         zIndex="1000"
         bg="background"
-        top="24"
-        left="4"
-        right="4"
+        top="20"
+        left="0"
         px="4"
         rounded="xl"
         overflow="scroll"

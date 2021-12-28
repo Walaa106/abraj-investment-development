@@ -131,16 +131,24 @@ const Form = ({
                 <h4>
                   تواصل معنا عبر البريد الالكتروني :
                 </h4>
-                <p> info@abraj.ps </p>
+                <a href='mailto:ayman@abraj.ps' color='#fff' sx={{
+                  ':hover': {
+                    color: '#fff'
+                  }
+                }}> info@abraj.ps </a>
               </div>
 
               <div borderBottom="1px solid rgba(255, 255, 255, 0.2)" py='4'>
                 <h4>
                   اتصل بنا عالارقام التالية:
                 </h4>
-                <p>
+                <a href='tel:+022987424' color='#fff' sx={{
+                  ':hover': {
+                    color: '#fff'
+                  }
+                }}>
                   tel: 02-2987424
-                </p>
+                </a>
                 <p>fax: 02-2987434</p>
               </div>
             </div>

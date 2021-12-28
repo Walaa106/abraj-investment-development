@@ -4,16 +4,21 @@ import HeroSlider, { Slide, Nav, OverlayContainer } from "hero-slider";
 
 // Images
 const bogliasco = "/images/slider/1.jpg";
-const bogliasco2 = "/images/slider/2.jpg";
+const bogliasco2 = "/images/slider/2.JPG";
 const bogliasco3 = "/images/slider/3.jpg";
-const bogliasco4 = "/images/slider/4.jpg";
-const bogliasco5 = "/images/slider/5.jpg";
-const bogliasco6 = "/images/slider/6.jpg";
+const bogliasco4 = "/images/slider/4.JPG";
+const bogliasco5 = "/images/slider/5.JPG";
+const bogliasco6 = "/images/slider/6.JPG";
 
-const app = () => {
+const App = () => {
+  const nextSlideHandler = React.useRef()
+  const previousSlideHandler = React.useRef()
+
   return (
     <HeroSlider
-      slidingAnimation="left_to_right"
+      nextSlide={nextSlideHandler}
+      previousSlide={previousSlideHandler}
+      slidingAnimation="right_to_left"
       orientation="horizontal"
       initialSlide={1}
       onBeforeChange={(previousSlide, nextSlide) =>
@@ -24,6 +29,7 @@ const app = () => {
       style={{
         backgroundColor: "rgba(0, 0, 0, 0.33)"
       }}
+      shouldSlideOnArrowKeypress={true}
       settings={{
         slidingDuration: 250,
         slidingDelay: 100,
@@ -34,37 +40,23 @@ const app = () => {
       }}
     >
       <OverlayContainer>
-        <div sx={{display: "flex",
-justifyContent: "center",
-alignItems: "center",
-flexFlow: "column",
-width: "100%",
-height: "100%",
-margin: "0",
-padding: "0",
-pointerEvents: "none",
-backgroundColor: "rgba(0, 0, 0, 0.1)"}}>
-          <div sx={{display: "flex",
-justifyContent: "center",
-alignItems: "center",
-flexFlow: "column",
-width: "100%",
-height: "100%",
-margin: "0",
-padding: "0",
-pointerEvents: "none",
-backgroundColor: "rgba(0, 0, 0, 0.1)"}}></div>
-          <div sx={{display: "flex",
-justifyContent: "center",
-alignItems: "center",
-flexFlow: "column",
-width: "100%",
-height: "100%",
-margin: "0",
-padding: "0",
-pointerEvents: "none",
-backgroundColor: "rgba(0, 0, 0, 0.1)"}}></div>
-        </div>
+        
+          <button sx={{
+                width: 100,
+                margin: "12px 8px"
+              }}
+              onClick={() => previousSlideHandler.current()}
+            >
+            </button>
+          <button
+              sx={{
+                width: 100,
+                margin: "12px 8px"
+              }}
+            button="success"
+            onClick={() => nextSlideHandler.current()}
+          >
+          </button>
       </OverlayContainer>
 
       <Slide
@@ -113,4 +105,4 @@ backgroundColor: "rgba(0, 0, 0, 0.1)"}}></div>
   );
 };
 
-export default app;
+export default App;

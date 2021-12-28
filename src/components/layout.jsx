@@ -76,10 +76,14 @@ export default function Layout({ children, props }) {
   return (
     <>
         <Notifications />
-        {/* <div position='fixed' left='0'>
-          <img src='/images/messenger.png' w='70' />
-          <img src='/images/whatsapp.png' w='70' />
-        </div> */}
+        <div position='fixed' left='0' bottom='10%' zIndex='99' display='flex' flexDirection='column' px='4'>
+            <a href='https://www.facebook.com/messages/t/105268738310110' target="_blank" rel="noopener noreferrer">
+              <img src='/images/messenger.png' w='2.5rem' />
+            </a>
+            <a href="https://wa.me/972594060600" target="_blank" rel="noopener noreferrer">
+              <img src='/images/whatsapp.png' w='2.5rem' />
+            </a>
+        </div>
         {/* Start Header */}
         <Header
             minH='500|0'

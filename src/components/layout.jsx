@@ -96,7 +96,7 @@ export default function Layout({ children, props }) {
         />
         {/* End Header */}
         {/* Start Content */}
-        <section pb="6|8|12" bg='#f8f8f8' pt='20|auto' borderTop="1px solid rgba(38, 39, 41, 0.1)" {...props}>
+        <section pb="6|8|12" bg='#f8f8f8' pt='20|0' borderTop="1px solid rgba(38, 39, 41, 0.1)" {...props}>
             {children}
         </section>
         {/* End Content */}

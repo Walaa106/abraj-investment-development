@@ -3,13 +3,16 @@ import React from "react";
 import HeroSlider, { Slide, Nav, OverlayContainer } from "hero-slider";
 
 // Images
-const bogliasco = "/images/slider/1.jpeg";
-const bogliasco2 = "/images/slider/2.jpeg";
-const bogliasco3 = "/images/slider/3.jpeg";
-const bogliasco4 = "/images/slider/4.jpeg";
-const bogliasco5 = "/images/slider/5.jpeg";
-const bogliasco6 = "/images/slider/6.jpeg";
-
+const images = [
+  "/images/slider/1.jpeg",
+  "/images/slider/2.jpeg",
+"/images/slider/5.jpeg",
+"/images/slider/6.jpeg",
+"/images/slider/7.jpeg",
+"/images/slider/8.jpeg",
+"/images/slider/9.jpeg",
+"/images/slider/10.jpeg"
+]
 const App = () => {
   const nextSlideHandler = React.useRef()
   const previousSlideHandler = React.useRef()
@@ -58,48 +61,19 @@ const App = () => {
           >
           </button>
       </OverlayContainer>
+      {
+        images.map(img => {
+          return (
+            <Slide
+              background={{
+                backgroundImage: img,
+                backgroundAttachment: "fixed"
+              }}
+            />
+          )
+        })
+      }
 
-      <Slide
-        background={{
-          backgroundImage: bogliasco,
-          backgroundAttachment: "fixed"
-        }}
-      />
-
-      <Slide
-        background={{
-          backgroundImage: bogliasco2,
-          backgroundAttachment: "fixed"
-        }}
-      />
-
-      <Slide
-        background={{
-          backgroundImage: bogliasco3,
-          backgroundAttachment: "fixed"
-        }}
-      />
-
-      <Slide
-        background={{
-          backgroundImage: bogliasco4,
-          backgroundAttachment: "fixed"
-        }}
-      />
-
-
-      <Slide
-        background={{
-          backgroundImage: bogliasco5,
-          backgroundAttachment: "fixed"
-        }}
-      />
-      <Slide
-        background={{
-          backgroundImage: bogliasco6,
-          backgroundAttachment: "fixed"
-        }}
-      />
       <Nav />
     </HeroSlider>
   );

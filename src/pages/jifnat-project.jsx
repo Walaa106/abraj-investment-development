@@ -166,13 +166,6 @@ export default function Example() {
                     overflow="hidden"
                     src='/images/sewar-2.png'
             />
-
-            <img colStart={`null|null|2`}
-                    w="full"
-                    rounded="lg"
-                    overflow="hidden"
-                    src='/images/sewar-3.png'
-            />
         </div>
         </section>
     </Layout>

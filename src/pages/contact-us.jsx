@@ -6,7 +6,6 @@ import Form from '../components/form'
 export default function Example() {
     // action="https://formspree.io/wala.abulebdeh@gmail.com"
     return <Layout>
-        <BasicSlider />
         <Form />
     </Layout>
 }

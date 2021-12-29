@@ -21,22 +21,24 @@ const Form = ({
     phone: '',
   });
   const sendMessage = (event) => {
-    console.log(formData, 'params')
     event.preventDefault();
-    emailjs.send("service_5krbqmf","template_gi5l6gd",{
-      ...formData,
-      reply_to: "ayman@abraj.ps",
-    }).then(function(response) {
-       console.log('SUCCESS!', response.status, response.text);
-       handleClick({
-         success: true
-      })
-    }, function(error) {
-       console.log('FAILED!!...', error);
-       handleClick({
-        error: true
-     })
-    });
+    handleClick({
+      success: true
+   })
+    // emailjs.send("service_5krbqmf","template_gi5l6gd",{
+    //   ...formData,
+    //   reply_to: "ayman@abraj.ps",
+    // }).then(function(response) {
+    //    console.log('SUCCESS!', response.status, response.text);
+    //    handleClick({
+    //      success: true
+    //   })
+    // }, function(error) {
+    //    console.log('FAILED!!...', error);
+    //    handleClick({
+    //     error: true
+    //  })
+    // });
   }
   const handleClick = ({success, error}) => {
     if (success) {

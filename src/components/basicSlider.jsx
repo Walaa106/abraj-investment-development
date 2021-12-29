@@ -3,12 +3,12 @@ import React from "react";
 import HeroSlider, { Slide, Nav, OverlayContainer } from "hero-slider";
 
 // Images
-const bogliasco = "/images/slider/1.jpg";
-const bogliasco2 = "/images/slider/2.JPG";
-const bogliasco3 = "/images/slider/3.jpg";
-const bogliasco4 = "/images/slider/4.JPG";
-const bogliasco5 = "/images/slider/5.JPG";
-const bogliasco6 = "/images/slider/6.JPG";
+const bogliasco = "/images/slider/1.jpeg";
+const bogliasco2 = "/images/slider/2.jpeg";
+const bogliasco3 = "/images/slider/3.jpeg";
+const bogliasco4 = "/images/slider/4.jpeg";
+const bogliasco5 = "/images/slider/5.jpeg";
+const bogliasco6 = "/images/slider/6.jpeg";
 
 const App = () => {
   const nextSlideHandler = React.useRef()

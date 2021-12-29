@@ -16,7 +16,7 @@ export default function Example() {
           {
             heading: "مبنى أبراج",
             text: "يقع أبراج هاوس في موقع إستراتيجي مميز مطل على مدينة رام الله، و يجاور عدد من المقرات الرسمية لمجموعة من الهيئات العالمية و المحلية مثل مقر البوليس الاوروبي و مقر الأمم المتحدة و قصر الثقافة، بالإضافة لمباني حكومية. و قريبا سيتم إنشاء قاعات المعارض التابعة لبلدية رام الله. ",
-            image: '/images/slider/5.JPG',
+            image: '/images/slider/1.jpeg',
             link: (
               <a display="inline-flex" alignItems="center" href="/abraj-building">
                 للمزيد <ArrowRight size="4" ml="2" />

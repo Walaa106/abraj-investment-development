@@ -25,20 +25,20 @@ const Form = ({
     handleClick({
       success: true
    })
-    // emailjs.send("service_5krbqmf","template_gi5l6gd",{
-    //   ...formData,
-    //   reply_to: "ayman@abraj.ps",
-    // }).then(function(response) {
-    //    console.log('SUCCESS!', response.status, response.text);
-    //    handleClick({
-    //      success: true
-    //   })
-    // }, function(error) {
-    //    console.log('FAILED!!...', error);
-    //    handleClick({
-    //     error: true
-    //  })
-    // });
+    emailjs.send("service_5krbqmf","template_gi5l6gd",{
+      ...formData,
+      reply_to: "ayman@abraj.ps",
+    }).then(function(response) {
+       console.log('SUCCESS!', response.status, response.text);
+       handleClick({
+         success: true
+      })
+    }, function(error) {
+       console.log('FAILED!!...', error);
+       handleClick({
+        error: true
+     })
+    });
   }
   const handleClick = ({success, error}) => {
     if (success) {
@@ -144,14 +144,26 @@ const Form = ({
                 <h4>
                   اتصل بنا عالارقام التالية:
                 </h4>
-                <a href='tel:+022987424' color='#fff' sx={{
-                  ':hover': {
-                    color: '#fff'
-                  }
-                }}>
-                  tel: 02-2987424
-                </a>
-                <p>fax: 02-2987434</p>
+                <div display='flex' >
+                  <p>رقم الهاتف:&nbsp;</p>
+                  <a href='tel:+022987424' color='#fff' sx={{
+                    ':hover': {
+                      color: '#fff'
+                    }
+                  }}>
+                    02-2987424
+                  </a>
+                </div>
+                <div display='flex'>
+                 رقم الهاتف المحمول:&nbsp;
+                  <p sx={{direction: 'ltr', width: '122px'}}>
+                    +972 594-060-600
+                  </p>
+                </div>
+                <div display='flex'>
+                    رقم الفاكس:&nbsp;
+                  <p sx={{direction: 'rtl', width: '122px'}}>02-2987434</p>
+                </div>
               </div>
             </div>
           </div>

@@ -30,7 +30,7 @@ const App = () => {
       onChange={nextSlide => console.log("onChange", nextSlide)}
       onAfterChange={nextSlide => console.log("onAfterChange", nextSlide)}
       style={{
-        backgroundColor: "rgba(0, 0, 0, 0.33)"
+        backgroundColor: "rgba(0, 0, 0, 0.33)",
       }}
       shouldSlideOnArrowKeypress={true}
       settings={{
@@ -39,7 +39,7 @@ const App = () => {
         shouldAutoplay: true,
         shouldDisplayButtons: true,
         autoplayDuration: 5000,
-        height: "90vh"
+        height: "90vh",
       }}
     >
       <OverlayContainer>
@@ -67,7 +67,8 @@ const App = () => {
             <Slide
               background={{
                 backgroundImage: img,
-                backgroundAttachment: "fixed"
+                backgroundAttachment: "fixed",
+                backgroundPosition: 'center center'
               }}
             />
           )

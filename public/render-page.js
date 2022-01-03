@@ -7402,6 +7402,7 @@ const theme = {
     mt: 6,
     w: "full",
     borderCollapse: "collapse",
+    borderWidth: 1,
     "tr:hover": {
       bg: "muted"
     },

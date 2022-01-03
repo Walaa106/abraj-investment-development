@@ -63,13 +63,19 @@ const footerLinks = [{
         href: "mailto:ayman@abraj.ps",
     },
     {
-        title: "tel: 02-2987424",
+        title: "رقم الهاتف: ",
+        value: "02-2987424",
         href: "tel:+022987424",
+    }, {
+      title: "رقم الهاتف المحمول: ",
+      value: "+972 594-060-600",
+      href: "tel:+972 594-060-600",
     },
     {
-        title: "fax: 02-2987434",
+        title: "رقم الفاكس: ",
+        value: "02-2987434",
         href: "#",
-    }],
+    }]
 }];
 
 export default function Layout({ children, props }) {

@@ -61,6 +61,7 @@ export default function Block({
                       fontFamily='Tajawal'
                     >
                       {item.title}
+                      <p sx={{direction: 'ltr'}}>{item.value}</p>
                     </a>
                   ))}
                 </div>
